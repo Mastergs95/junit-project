@@ -1,10 +1,6 @@
 package org.example;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.*;
 
 
 public class AccountDetailsTest {
@@ -24,12 +20,14 @@ public class AccountDetailsTest {
     }
 
     @Test
+    @Tag("DEV")
     void depositTest(){
         accountDetails.deposit(500);
         System.out.println("@Test block for deposit has been executed");
     }
 
     @Test
+    @Tag("TEST")
     void withdrawTest(){
         accountDetails.withdraw(1000);
         System.out.println("@Test block for withdraw has been executed");
